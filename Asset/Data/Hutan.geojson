@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "Hutan",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Hutan": "Forest Park (Tahura)", "Latitude": -6.2921387, "Longitude": 105.841278 }, "geometry": { "type": "Point", "coordinates": [ 105.841278, -6.292138699999953 ] } },
+{ "type": "Feature", "properties": { "Hutan": "Taman Nasional Ujung Kulon", "Latitude": -6.7846944, "Longitude": 105.3751088 }, "geometry": { "type": "Point", "coordinates": [ 105.375108800000078, -6.784694399999978 ] } }
+]
+}

@@ -1,0 +1,23 @@
+{
+"type": "FeatureCollection",
+"name": "Pantai",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Pantai": "Pantai Pasir Putih Carita Pandeglang", "Latitude": -6.2983855, "Longitude": 105.8415153 }, "geometry": { "type": "Point", "coordinates": [ 105.841515300000083, -6.298385499999938 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Pantai Karoeng Labuan Pandeglang", "Latitude": -6.4168595, "Longitude": 105.8278383 }, "geometry": { "type": "Point", "coordinates": [ 105.827838300000053, -6.41685949999993 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Caringin Beach", "Latitude": -6.3576265, "Longitude": 105.822533 }, "geometry": { "type": "Point", "coordinates": [ 105.822533, -6.357626499999981 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Pantai Daplangu Sumur Pandeglang", "Latitude": -6.6743257, "Longitude": 105.5728318 }, "geometry": { "type": "Point", "coordinates": [ 105.572831800000074, -6.67432569999994 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Pantai Sumur Pandeglang Banten", "Latitude": -6.7801715, "Longitude": 105.503314 }, "geometry": { "type": "Point", "coordinates": [ 105.503314, -6.780171499999938 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Pantai Carita Anyer", "Latitude": -6.3059224, "Longitude": 105.84123 }, "geometry": { "type": "Point", "coordinates": [ 105.84123, -6.305922399999929 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Matahari Beach", "Latitude": -8.147347, "Longitude": 114.665551 }, "geometry": { "type": "Point", "coordinates": [ 114.665551, -8.147347 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Bugel beach Mega Camara", "Latitude": -6.5835947, "Longitude": 105.6246979 }, "geometry": { "type": "Point", "coordinates": [ 105.624697900000058, -6.583594699999935 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Pantai Cipenyu", "Latitude": -6.5050428, "Longitude": 105.6396765 }, "geometry": { "type": "Point", "coordinates": [ 105.639676500000064, -6.505042799999956 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Pesona Pantai Kabua Indah Caringin", "Latitude": -6.3556718, "Longitude": 105.8230014 }, "geometry": { "type": "Point", "coordinates": [ 105.823001400000066, -6.355671799999925 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Pantai Kerang", "Latitude": -6.5230402, "Longitude": 105.7390792 }, "geometry": { "type": "Point", "coordinates": [ 105.739079200000049, -6.523040199999969 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Wisata pantai carita", "Latitude": -6.2962074, "Longitude": 105.8400656 }, "geometry": { "type": "Point", "coordinates": [ 105.840065600000059, -6.296207399999957 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Wisata Tanjung Lesung", "Latitude": -6.5123073, "Longitude": 105.6764286 }, "geometry": { "type": "Point", "coordinates": [ 105.676428600000065, -6.512307299999975 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Carita Beach", "Latitude": -6.2959861, "Longitude": 105.8396249 }, "geometry": { "type": "Point", "coordinates": [ 105.839624900000047, -6.295986099999936 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Pantai Pandan Carita Cafe and Resto", "Latitude": -6.3031266, "Longitude": 105.841612 }, "geometry": { "type": "Point", "coordinates": [ 105.841612, -6.303126599999928 ] } },
+{ "type": "Feature", "properties": { "Pantai": "Point Center Kasvana Beach", "Latitude": -6.5051875, "Longitude": 105.6401875 }, "geometry": { "type": "Point", "coordinates": [ 105.640187500000081, -6.505187499999977 ] } }
+]
+}

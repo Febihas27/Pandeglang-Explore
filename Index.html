@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pandeglang GeoExplore</title>
+  
+  <!-- Link CSS Poppins (sesuaikan jika sudah ada) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <!--Jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Import Google Font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen@2.4.0/Control.FullScreen.css" />
+  <script src="https://unpkg.com/leaflet.fullscreen@2.4.0/Control.FullScreen.js"></script>
+
+
+</head>
+<body>
+    <div id="home"></div>
+  <header class="header">
+    <div class="logo-container">
+      <img src="Asset/Logo 1.png" alt="Logo 1" class="logo">
+      <img src="Asset/Logo 2.png" alt="Logo 2" class="logo">
+      <img src="Asset/Logo 3.png" alt="Logo 3" class="logo">
+      <img src="Asset/Saig.png" alt="Logo 4" class="logo-saig">
+
+    </div>
+    <nav class="navbar">
+      <a href="#home">🏠︎ Home</a>
+      <a href="#map">🗺 Map</a>
+      <a href="#about">☻ About</a>
+      <a href="#contact">☏ Contact</a>
+    </nav>
+  </header>
+
+ <main class="hero">
+  <div class="hero-content">
+    <h1>
+      <span class="bold">PANDEGLANG</span>
+      <span class="highlight">GeoExplore</span>
+    </h1>
+    <a href="#start-button" class="start-button" role="button" aria-label="Mulai menyusuri tanah Banten">
+      <span class="circle" aria-hidden="true"></span>
+      <span class="text">Mulai</span> MENYUSURI TANAH BANTEN
+    </a>
+  </div>
+</main>
+
+    <!-- Deskripsi Section -->
+  <section class="deskripsi" id="start-button">
+  <div class="deskripsi-wrapper">
+      <div class="deskripsi-image">
+        <img src="Asset/surga.jpg" alt="Pantai di Pandeglang" />
+      </div>
+      <div class="deskripsi-text">
+        <h2>Hadir sebagai <br><span>Surga Tersembunyi</span></h2>
+        <p>
+          Terletak di ujung barat Pulau Jawa, Pandeglang adalah permata tersembunyi yang menyimpan sejuta pesona alam dan budaya. Dikenal sebagai “surga tersembunyi”, Pandeglang menawarkan keindahan yang belum banyak tersentuh, mulai dari pantai berpasir putih yang menawan, perairan jernih di Taman Nasional Ujung Kulon, hingga pesona Gunung Karang yang menjulang megah.
+        </p>
+      </div>
+    </div>
+    <div class="corner-accent"></div>
+  </section>
+ <!-- Our Destination Section -->
+<section class="destination">
+  <h2 class="destination-title">Our Destination <span class="icon">: ̗̀➛</span></h2>
+  <div class="destination-grid">
+
+    <div class="destination-card">
+      <h3><a href="https://banten.idntimes.com/travel/destination/idn-times-hyperlocal/gak-hanya-anyer-7-pantai-di-pandeglang-ini-juga-punya-view-wow" target="_blank">PANTAI</a></h3>
+      <p>Surga pasir putih yang berbisik lembut oleh ombak, mengundang jiwa untuk tenggelam dalam keheningan alam yang abadi.</p>
+      <img src="Asset/pantai.jpg" alt="Pantai" />
+    </div>
+
+    <div class="destination-card">
+      <h3><a href="https://banten.suara.com/read/2023/08/28/191200/6-rekomendasi-pulau-di-pandeglang-banten-cocok-jadi-tempat-healing-bareng-keluarga" target="_blank">PULAU</a></h3>
+      <p>Pulau-pulau kecil di Pandeglang, permata tropis yang menyimpan rahasia bawah laut penuh warna dan kehidupan yang mempesona.</p>
+      <img src="Asset/pulau.jpeg" alt="Pulau" />
+    </div>
+
+    <div class="destination-card">
+      <h3><a href="https://kumparan.com/seputar-jabar/ada-apa-di-gunung-karang-pandeglang-banten-berikut-ini-informasi-selengkapnya-24yET5fHOgC" target="_blank">GUNUNG</a></h3>
+      <p>Gunung dan bukit hijau Pandeglang berdiri megah, menantang para petualang menembus kabut dan menyambut cakrawala tanpa batas.</p>
+      <img src="Asset/Gkarang.jpg" alt="Gunung" />
+    </div>
+
+    <div class="destination-card">
+      <h3><a href="https://www.ujungkulon.net/" target="_blank">HUTAN</a></h3>
+      <p>Benteng kehidupan yang memeluk flora dan fauna dengan harmoni alam yang tiada tara.</p>
+      <img src="Asset/TNUK.jpg" alt="Hutan" />
+    </div>
+
+    <div class="destination-card">
+      <h3><a href="https://kumparan.com/jendela-dunia/6-rekomendasi-curug-di-pandeglang-untuk-liburan-1zhpf5niWQx" target="_blank">AIR TERJUN</a></h3>
+      <p>Air terjun tersembunyi mengalir deras dengan gemuruh air yang menyejukkan jiwa di tengah rimbunnya pepohonan.</p>
+      <img src="Asset/Curug sawe.jpg" alt="Air Terjun" />
+    </div>
+
+  </div>
+</section>
+
+<!-- Peta Section -->
+<section id="map" class="peta-section">
+  <h2>PETA SEBARAN WISATA DI KABUPATEN PANDEGLANG</h2>
+  <div id="mapid"></div>
+</section>
+ <!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<!-- JS untuk inisialisasi Leaflet -->
+<script src="script.js" defer></script>
+
+<!-- TOP WISATA SECTION -->
+<section class="top-wisata">
+  <div class="top-wisata-left">
+    <img src="Asset/location.png" alt="Location Icon" class="location-icon" />
+    <h2>Top 3<br>Wisata di<br>Pandeglang</h2>
+  </div>
+
+  <div class="top-wisata-right">
+
+    <!-- Tanjung Lesung -->
+    <a href="https://maps.google.com/?q=Tanjung+Lesung+Pandeglang" target="_blank" class="wisata-card" style="text-decoration: none; color: inherit;">
+      <img src="Asset/TJ.png" alt="Tanjung Lesung" />
+      <div class="wisata-info">
+        <h3>Tanjung Lesung</h3>
+        <p><i class="fa fa-clock-o"></i> 1 hour, 45 minutes</p>
+        <div class="rating">
+          ⭐⭐⭐⭐⭐ <span>4.8</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Pulau Oar -->
+    <a href="https://maps.app.goo.gl/vxdvT97SPDZhxitF8" target="_blank" class="wisata-card" style="text-decoration: none; color: inherit;">
+      <img src="Asset/Oar.jpg" alt="Pulau Oar" />
+      <div class="wisata-info">
+        <h3>Pulau Oar</h3>
+        <p><i class="fa fa-clock-o"></i> 2 hour, 21 minutes</p>
+        <div class="rating">
+          ⭐⭐⭐⭐⭐ <span>4.9</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Curug Leuwi Bumi -->
+    <a href="https://maps.google.com/?q=Curug+Leuwi+Bumi+Pandeglang" target="_blank" class="wisata-card" style="text-decoration: none; color: inherit;">
+      <img src="Asset/leuwibumi.jpg" alt="Curug Leuwi Bumi" />
+      <div class="wisata-info">
+        <h3>Curug Leuwi Bumi</h3>
+        <p><i class="fa fa-clock-o"></i> 1 hour, 18 minutes</p>
+        <div class="rating">
+          ⭐⭐⭐⭐⭐ <span>4.8</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+  <!---Section Pembuat-->
+  <section id="about" class="tentang-pembuat">
+      <div class="pembuat-kiri">
+      <div class="frame-foto">
+        <img src="Asset/febi.png" alt="Foto Pembuat">
+      </div>
+    </div>
+      <div class="tentang-container">
+  <h2>Tentang Pembuat</h2>
+  <p>Pandeglang GeoExplore dikembangkan oleh Febi Hasbiani, seorang mahasiswa Sains Informasi Geografi dengan minat besar di bidang Geospasial. Web ini dibuat sebagai media eksplorasi digital untuk memperkenalkan keindahan dan potensi Kabupaten Pandeglang kepada masyarakat luas, melalui pendekatan peta interaktif dan informasi spasial.</p>
+  <p class="quote">“Membawa peta lebih dari sekadar arah – tapi menjadi jendela untuk mengenal dan menghargai daerah kita sendiri.”</p>
+</div>
+  </section>
+<!-- Section Kontak -->
+  <section id="contact" class="kontak-section">
+  <div class="kontak-container">
+    <h2>Kontak Saya</h2>
+    <p>🖂 Email: <a href="mailto:febihas02@gmail.com">febihas02@gmail.com</a></p>
+    <p>🅾 Instagram: <a href="https://instagram.com/febiihasbiani" target="_blank">@febiihasbiani</a></p>
+    <p>𖥔 Alamat <a href="https://maps.app.goo.gl/gACQXcWJ2m4WRMHf7" target="_blank">Jl. Dr. Setiabudi No.229, Isola, Kec. Sukasari, Kota Bandung</a></p>
+  </div>
+  <footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Pandeglang GeoExplore. All rights reserved.</p>
+    <p>Dibuat oleh <strong>Febi Hasbiani</strong> – Mahasiswa Sains Informasi Geografi</p>
+  </div>
+</footer>
+</section>
+
+</section>
+</body>
+</html>
+
+  

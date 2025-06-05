@@ -1,0 +1,792 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY tanpa background gambar, aman dari overflow horizontal */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa; /* fallback netral untuk section lain */
+  color: #002b41;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* cegah scroll horizontal */
+}
+
+/* HERO section dengan background gambar */
+.hero {
+  background: url('Asset/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  width: 100vw; /* full lebar layar */
+  height: 100vh; /* setinggi 1 layar penuh */
+  padding-top: 90px; /* jika ada navbar fixed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white; /* teks kontras */
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(133, 207, 232, 0.3); /* biru muda transparan */
+  z-index: -1; /* sangat penting: agar tidak menutupi konten */
+  pointer-events: none; /* agar tidak mengganggu klik/interaksi */
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  position: fixed; /* Kalau mau header tetap di atas walau scroll */
+  /* top: 0;  <-- hapus ini */
+  width: 100%;
+  height: 80px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.616); /* Optional biar header terlihat */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);       /* Optional */
+  top: 0;
+  left: 0;
+}
+.navbar a {
+  text-decoration: none;
+  /* background-color: #FFA500;  hapus */
+  color: black;             /* warna teks tetap */
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.logo-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.logo-container img.logo {
+  height: 45px;       /* Tinggi logo yang diinginkan */
+  width: auto;        /* Lebar otomatis sesuai proporsi */
+  object-fit: contain; /* Agar gambar pas tanpa terpotong */
+  max-width: 100px;   /* Batasi lebar maksimum supaya tidak terlalu melebar */
+}
+.logo-saig {
+  max-height: 100px; /* Ganti sesuai kebutuhan agar proporsional */
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh; /* 100% dari tinggi viewport */
+  width: 100%;  /* 100% dari lebar viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  padding: 40px;
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 80px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.bold {
+  font-weight: 700;
+  color: #002b41;
+}
+
+.highlight {
+  font-style: italic;
+  font-weight: 600;
+  color: #f57c00;
+}
+
+/* Start Button */
+.start-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: white;
+  border: 3px solid #002b41;
+  border-radius: 50px;
+  padding: 8px 20px;
+  color: #002b41;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #f0f0f0;
+}
+
+.start-button .circle {
+  width: 20px;
+  height: 20px;
+  background-color: #014563;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.start-button .text {
+  background-color: #002b41;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+/* Section Deskripsi - Full Widget */
+.deskripsi {
+  width: 100vw;
+  height: 100vh; /* Tambahkan ini untuk full tinggi layar */
+  background: linear-gradient(to bottom, #dceeff, #ffffff); /* gradasi biru muda lembut */
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0; /* Hapus padding default agar benar-benar penuh */
+}
+
+.deskripsi-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1400px;
+  width: 100%;
+  padding: 50px 0px;
+  box-sizing: border-box;
+}
+
+/* Gambar di sisi kiri */
+.deskripsi-image {
+  position: relative;
+  max-width: 620px;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.deskripsi-image img {
+  width: 100%;
+  border-radius: 24px;
+  border: 3px solid #91b5e8c3;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Kotak abu-abu gelap di belakang kiri gambar */
+.deskripsi-image::before {
+  content: "";
+  position: relative;
+  left: -30px;
+  top: 30px;
+  width: 100px;
+  height: 100%;
+  background-color: #dfe5e8;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+/* Teks Deskripsi */
+.deskripsi-text {
+  max-width: 500px;
+  background-color: #beddf3;
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.deskripsi-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #003b57;
+  margin-bottom: 10px;
+}
+
+.deskripsi-text h2 span {
+  color: #002b41;
+}
+
+.deskripsi-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #2b2b2b;
+  text-align: justify;
+}
+
+/* Branding Pandeglang di pojok kiri bawah */
+.deskripsi-branding {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  font-size: 14px;
+  color: #607d8b;
+}
+
+
+/* Corner Accent */
+.corner-accent {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-top: 5px solid #ff9900;
+  border-left: 5px solid #ff9900;
+  border-radius: 0 0 0 100%;
+  background-color: #014563;
+}
+/* Tetap dari atas */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Destination Section */
+.destination {
+  background-color: #d5e7f6;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.destination-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #002b41;
+  margin-bottom: 40px;
+}
+
+.destination-title .icon {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.destination-card {
+  background-color: #f4f4f4;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease;
+  min-height: 360px; /* tinggi minimum agar semua kotak seragam */
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+}
+
+.destination-card h3 {
+  font-size: 18px;
+  color: #002b41;
+  font-weight: 700;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.destination-card p {
+  font-size: 14px;
+  color: #333;
+  flex-grow: 1; /* biar bagian gambar tetap di bawah meskipun deskripsi lebih pendek */
+  align-self: flex-start;
+  margin-bottom: 15px;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* Background khusus untuk area WebGIS */
+.peta-section {
+  background: linear-gradient(to bottom, #dceeff, #ffffff); /* gradasi biru muda lembut */
+  padding: 60px 0px;
+  position: relative;
+  z-index: 1;
+}
+#mapid {
+  height: 650px; /* tinggi peta */
+  width: 90%;   /* lebar penuh container */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 20px auto;
+}
+.peta-section h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #002b41;
+  margin-bottom: 20px;
+}
+/* Gaya dasar untuk kotak legenda */
+.info.legend {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  max-width: 240px;
+}
+/*LEGENDA
+//* Container utama legenda */
+.leaflet-control .info.legend {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: auto;      /* biar menyesuaikan lebar konten */
+  max-width: 350px; /* batas maksimal lebar supaya tidak terlalu besar */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  min-width: 300px;       /* cukup minimum */
+  max-width: 100%;         /* tidak meluber */
+  width: fit-content;      /* ❗ ini kuncinya, biar lebarnya ngikut isi */
+}
+
+/* Container 2 kolom */
+.legend-columns {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+/* Masing-masing kolom */
+.legend-column {
+  flex: 1;           /* masing-masing kolom sama lebar */
+  min-width: 140px;  /* minimal lebar supaya kolom tidak terlalu kecil */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Judul legenda di tengah */
+.leaflet-control .info.legend h4 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Atur item dalam legenda */
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+/* Pembungkus simbol */
+.symbol-wrapper {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* Gaya umum untuk panel kontrol layer Leaflet */
+.leaflet-control-layers {
+  font-family: 'Poppins', sans-serif; /* Ganti sesuai kebutuhan */
+  font-size: 14px; /* Ukuran font */
+  background-color: rgba(255, 255, 255, 0.9); /* Sedikit transparan */
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+/* Judul atau label layer (opsional, jika menggunakan grup) */
+.leaflet-control-layers-separator {
+  border-top: 1px solid #999;
+  margin: 5px 0;
+}
+
+/* Label nama layer (basemap dan overlay) */
+.leaflet-control-layers-base label,
+.leaflet-control-layers-overlays label {
+  color: #333; /* Warna teks */
+  cursor: pointer;
+  line-height: 1.4;
+  display: block;
+  padding: 2px 4px;
+  transition: background 0.3s;
+}
+
+/*TOP WISATA*/
+.leaflet-control-layers-base label:hover,
+.leaflet-control-layers-overlays label:hover {
+  background-color: rgba(126, 174, 212, 0.9); /* Sedikit transparan */
+  border-radius: 4px;
+}
+/* Section full-width dengan gradasi biru muda */
+.top-wisata {
+  width: 100%;
+  padding: 60px 0;
+  background: white;
+}
+
+/* Container dalam section */
+.top-wisata-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  flex-wrap: wrap;
+}
+
+.top-wisata {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px 5%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  gap: 32px;
+}
+
+.top-wisata-left {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.top-wisata-left .location-icon {
+  width: 200px;
+  margin-bottom: 40px;
+}
+
+.top-wisata-left h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1d3557;
+  line-height: 1.3;
+}
+
+.top-wisata-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 300px;
+}
+
+/* Card destinasi wisata */
+.wisata-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  background: #f1f5f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.wisata-card:hover {
+  transform: translateY(-4px);
+}
+
+.wisata-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Informasi di dalam card */
+.wisata-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 6px;
+}
+
+.wisata-info p {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.wisata-info i {
+  color: #7c3aed;
+  margin-right: 6px;
+}
+
+.rating {
+  font-size: 18px;
+  color: #f59e0b;
+}
+
+.rating span {
+  margin-left: 8px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .top-wisata-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-wisata-left h2 {
+    font-size: 28px;
+  }
+
+  .wisata-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wisata-card img {
+    margin-bottom: 20px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Tentang Pembuat */
+.full-widget {
+  width: 100vw;
+  height: 100vh;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* SECTION: Tentang Pembuat */
+.tentang-pembuat {
+  background: #f4faff;
+  border-top: 4px solid #a78bfa;
+  padding: 150px;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  gap: 80px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pembuat-kiri {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frame-foto {
+  display: inline-block;
+  border: 4px solid #3b82f6;
+  border-radius: 50%;
+  padding: 6px;
+  position: relative;
+  overflow: hidden;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 16px;
+}
+
+.frame-foto::before,
+.frame-foto::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.frame-foto::before {
+  left: -4px;
+}
+.frame-foto::after {
+  right: -4px;
+}
+
+.frame-foto img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tentang-container {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tentang-container h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0a2b3c;
+}
+
+.tentang-container p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #0a2b3c;
+  text-align: justify; /* Rata kanan-kiri */
+  line-height: 1.8;
+}
+
+.tentang-container .quote {
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+
+/* SECTION: Kontak */
+.kontak-section {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #a3c1d6, #f0f9ff);
+  flex-direction: column;
+  text-align: center;
+  color: #1e293b;
+  padding: 70px;
+}
+
+.kontak-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.kontak-section h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  font-weight: bold;
+}
+
+.kontak-section p {
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.kontak-section a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.kontak-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .judul-section::after {
+    display: none;
+  }
+
+  .full-widget {
+    height: auto;
+    padding: 60px 0;
+  }
+}
+.footer {
+  background-color: #f4f8fc00;
+  color: #333;
+  text-align: center;
+  padding: 15px 0px; /* dikurangi dari 30px */
+  font-size: 13px;
+  border-top: 1px solid #cccccc00;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Ukuran Hp */
+/* --- style utama di atas --- */
+
+.destination {
+  padding: 100px 50px;
+}
+
+.destination-title {
+  font-size: 36px;
+}
+
+/* Media Query untuk Mobile */
+@media (max-width: 500px) {
+  .destination {
+    padding: 60px 20px;
+  }
+
+  .destination-title {
+    font-size: 28px;
+  }
+}

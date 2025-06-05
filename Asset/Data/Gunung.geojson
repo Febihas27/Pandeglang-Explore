@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "Gunung",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Gunung": "Gunung Karang", "Latitude": -6.2691666, "Longitude": 106.05 }, "geometry": { "type": "Point", "coordinates": [ 106.05, -6.269166599999949 ] } },
+{ "type": "Feature", "properties": { "Gunung": "Gunung Pulosari", "Latitude": -6.3416667, "Longitude": 105.9783333 }, "geometry": { "type": "Point", "coordinates": [ 105.978333300000088, -6.341666699999962 ] } },
+{ "type": "Feature", "properties": { "Gunung": "Gunung Aseupan", "Latitude": -6.2961111, "Longitude": 105.9294444 }, "geometry": { "type": "Point", "coordinates": [ 105.929444400000079, -6.296111099999962 ] } }
+]
+}

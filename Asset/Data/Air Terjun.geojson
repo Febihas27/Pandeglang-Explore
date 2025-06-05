@@ -1,0 +1,18 @@
+{
+"type": "FeatureCollection",
+"name": "Air Terjun",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Air_Terjun": "Curug Ka Tomo Pandeglang", "Latitude": -6.249082, "Longitude": 105.951172 }, "geometry": { "type": "Point", "coordinates": [ 105.951172, -6.249082 ] } },
+{ "type": "Feature", "properties": { "Air_Terjun": "Air Terjun Batu Catok", "Latitude": -6.3588148, "Longitude": 105.9847396 }, "geometry": { "type": "Point", "coordinates": [ 105.984739600000069, -6.358814799999948 ] } },
+{ "type": "Feature", "properties": { "Air_Terjun": "Curug Cimanggung", "Latitude": -6.2450113, "Longitude": 105.8944918 }, "geometry": { "type": "Point", "coordinates": [ 105.894491800000083, -6.245011299999931 ] } },
+{ "type": "Feature", "properties": { "Air_Terjun": "Curug Ciajeung & Curug Kembar", "Latitude": -6.2553836, "Longitude": 105.9035706 }, "geometry": { "type": "Point", "coordinates": [ 105.90357060000008, -6.255383599999959 ] } },
+{ "type": "Feature", "properties": { "Air_Terjun": "Curug Putri Carita", "Latitude": -6.2896674, "Longitude": 105.8386235 }, "geometry": { "type": "Point", "coordinates": [ 105.83862350000004, -6.289667399999928 ] } },
+{ "type": "Feature", "properties": { "Air_Terjun": "Mata Air Citaman Jiput Pandeglang", "Latitude": -6.3401919, "Longitude": 105.9191606 }, "geometry": { "type": "Point", "coordinates": [ 105.919160600000055, -6.340191899999979 ] } },
+{ "type": "Feature", "properties": { "Air_Terjun": "Curug Sawer Cigeulis", "Latitude": -6.591363, "Longitude": 105.698606 }, "geometry": { "type": "Point", "coordinates": [ 105.698606, -6.591363 ] } },
+{ "type": "Feature", "properties": { "Air_Terjun": "Pesona Curug Goong", "Latitude": -6.3144731, "Longitude": 106.0062191 }, "geometry": { "type": "Point", "coordinates": [ 106.006219100000067, -6.31447309999993 ] } },
+{ "type": "Feature", "properties": { "Air_Terjun": "Wisata Air Panas Gunung Torong Hot Spring Park", "Latitude": -6.3453781, "Longitude": 106.0848484 }, "geometry": { "type": "Point", "coordinates": [ 106.084848400000055, -6.345378099999948 ] } },
+{ "type": "Feature", "properties": { "Air_Terjun": "Curug Leuwi Putih", "Latitude": -6.2353947, "Longitude": 105.8972986 }, "geometry": { "type": "Point", "coordinates": [ 105.897298600000056, -6.235394699999972 ] } },
+{ "type": "Feature", "properties": { "Air_Terjun": "Curug Luhur Karangbolong", "Latitude": -6.6293058, "Longitude": 105.6413029 }, "geometry": { "type": "Point", "coordinates": [ 105.641302900000085, -6.629305799999941 ] } }
+]
+}
